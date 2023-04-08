@@ -13,13 +13,12 @@ class Complex{
         cout<<real<<" +i"<<imag;
     }
     friend Complex operator+(Complex c1,Complex c2);
-    friend ostream& operator<<(ostream& o,Complex& c);
-    
+    friend ostream& operator<<(ostream& o,Complex &c);
 };
-ostream& operator<<(ostream& o,Complex& c){
-        o<<c.real<<"+i"<<c.imag;
-        return o;
-    }
+ostream& operator<<(ostream& o,Complex &c){
+    o<<c.real<<"+i"<<c.imag;
+    return o;
+}
 Complex operator+(Complex c1,Complex c2){
     Complex temp(c1.real+c2.real,c1.imag+c2.imag);
     return temp;
